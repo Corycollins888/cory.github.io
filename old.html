@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COLLINS MOGOI - PORTFOLIO</title>
-    <!-- Load Fonat Awesome Icons -->
+    <title>COLLINS MOGOI- PORTFOLIO</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -16,11 +14,11 @@
         }
 
         :root {
-            --primary-color: #4a6cf7; /* Blue */
-            --secondary-color: #6a7c92; /* Gray */
-            --dark-color: #1d2144; /* Dark Navy */
-            --light-color: #f5f8ff; /* Light Blue/Gray Background */
-            --accent-color: #ff6b6b; /* Red (Unused in main theme, kept for reference) */
+            --primary-color: #4a6cf7;
+            --secondary-color: #6a7c92;
+            --dark-color: #1d2144;
+            --light-color: #f5f8ff;
+            --accent-color: #ff6b6b;
         }
 
         html {
@@ -61,7 +59,6 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-color);
-            text-transform: uppercase;
         }
 
         .nav-links {
@@ -78,13 +75,10 @@
             color: var(--dark-color);
             font-weight: 500;
             transition: color 0.3s;
-            padding: 5px 0;
-            border-bottom: 2px solid transparent;
         }
 
         .nav-links a:hover {
             color: var(--primary-color);
-            border-color: var(--primary-color);
         }
 
         .menu-toggle {
@@ -101,16 +95,9 @@
             min-height: 100vh;
         }
 
-        .hero > .container {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap; /* Allows stacking on small screens */
-            gap: 50px;
-        }
-
         .hero-content {
             flex: 1;
-            min-width: 300px;
+            padding-right: 50px;
         }
 
         .hero-image {
@@ -120,11 +107,8 @@
 
         .hero-image img {
             max-width: 100%;
-            height: auto;
-            border-radius: 50%; /* Making it a circle for a professional profile look */
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            max-height: 400px;
-            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .hero h1 {
@@ -148,19 +132,18 @@
             padding: 12px 30px;
             background-color: var(--primary-color);
             color: white;
-            border-radius: 8px; /* Slightly more rounded */
+            border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(74, 108, 247, 0.3);
         }
 
         .btn:hover {
             background-color: #3a5ce5;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(74, 108, 247, 0.5);
+            box-shadow: 0 5px 15px rgba(74, 108, 247, 0.4);
         }
 
         .btn-outline {
@@ -168,13 +151,11 @@
             border: 2px solid var(--primary-color);
             color: var(--primary-color);
             margin-left: 15px;
-            box-shadow: none;
         }
 
         .btn-outline:hover {
             background-color: var(--primary-color);
             color: white;
-            box-shadow: 0 4px 10px rgba(74, 108, 247, 0.3);
         }
 
         /* Sections */
@@ -191,17 +172,6 @@
             font-size: 2.5rem;
             color: var(--dark-color);
             margin-bottom: 15px;
-            position: relative;
-        }
-
-        .section-title h2::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 10px auto 0;
-            border-radius: 2px;
         }
 
         .section-title p {
@@ -215,12 +185,21 @@
             display: flex;
             align-items: center;
             gap: 50px;
-            flex-wrap: wrap;
         }
 
         .about-text {
             flex: 1;
-            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
         }
 
         .about-image {
@@ -230,39 +209,40 @@
 
         .about-image img {
             max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         /* Skills Section */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
         .skill-card {
             background: white;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
         }
 
         .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
         }
 
         .skill-card i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 20px;
         }
-        
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
         /* Projects Section */
         .projects-container {
             display: grid;
@@ -272,92 +252,97 @@
 
         .project-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
         }
-        
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-info p {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
         .project-tags span {
             background: #e9ecef;
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
             color: var(--secondary-color);
-            transition: background 0.3s;
         }
 
-        .project-card:hover .project-tags span {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* --- CONTACT SECTION PRESENTATION STYLES --- */
+        /* Contact Section */
         .contact-container {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1000px;
-            margin: 0 auto;
         }
 
         .contact-info {
-            flex: 1;
-            min-width: 300px;
             display: flex;
             flex-direction: column;
-            gap: 30px;
-            padding: 30px;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            gap: 20px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .contact-item i {
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            background-color: var(--light-color);
-            padding: 15px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            flex-shrink: 0; /* Prevents icon from shrinking on small screens */
-        }
-
-        .contact-item h3 {
+            justify-content: center;
             font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .contact-item p {
-            color: var(--secondary-color);
-            word-break: break-all; /* Ensures long numbers/emails wrap */
         }
 
         .contact-form {
-            flex: 2; /* Gives the form more visual space */
-            min-width: 350px;
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            position: relative; /* Essential for success message positioning */
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
 
         .form-group {
@@ -366,58 +351,24 @@
 
         .form-group label {
             display: block;
-            font-weight: 600;
             margin-bottom: 8px;
-            color: var(--dark-color);
+            font-weight: 500;
         }
 
-        .contact-form input[type="text"],
-        .contact-form input[type="email"],
-        .contact-form input[type="subject"],
-        .contact-form textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 12px 15px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 5px;
             font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
+            transition: border 0.3s;
         }
 
-        .contact-form input:focus,
-        .contact-form textarea:focus {
+        .form-group input:focus,
+        .form-group textarea:focus {
             border-color: var(--primary-color);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-        }
-        
-        /* SUCCESS MESSAGE OVERLAY STYLES (Added/Refined) */
-        #success-message {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(74, 108, 247, 0.95); /* Semi-transparent primary color overlay */
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5rem;
-            font-weight: 600;
-            border-radius: 12px;
-            opacity: 0; /* Initially hidden */
-            pointer-events: none;
-            transition: opacity 0.4s ease-in-out;
-            z-index: 10;
-        }
-        
-        #success-message.visible {
-            opacity: 1;
-            pointer-events: all;
         }
 
         /* Footer */
@@ -426,74 +377,59 @@
             color: white;
             padding: 50px 0 20px;
         }
-        
+
         .footer-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
         }
-        
-        .footer-content .logo {
-            color: white;
+
+        .social-links {
+            display: flex;
+            gap: 15px;
         }
-        
+
         .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            font-size: 1.5rem;
-            margin-left: 20px;
-            transition: color 0.3s;
+            text-decoration: none;
+            transition: all 0.3s;
         }
-        
+
         .social-links a:hover {
-            color: var(--primary-color);
+            background: var(--primary-color);
+            transform: translateY(-5px);
         }
-        
+
         .copyright {
             text-align: center;
             padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
 
         /* Responsive Design */
         @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            
             .hero-content {
                 padding-right: 0;
                 margin-bottom: 50px;
             }
             
-            .hero > .container, .about-content {
+            .about-content {
                 flex-direction: column;
-                text-align: center;
-            }
-            .about-text {
-                order: 2;
-            }
-            .about-image {
-                order: 1;
-            }
-            .hero-content {
-                order: 2;
-            }
-            .hero-image {
-                order: 1;
-            }
-            .hero h1 {
-                font-size: 3rem;
-            }
-            .hero-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-            .btn-outline {
-                margin-left: 0;
-            }
-            /* Adjust contact section to stack elements on medium/small screens */
-            .contact-container {
-                flex-direction: column;
-                gap: 30px;
             }
         }
 
@@ -514,7 +450,6 @@
                 justify-content: flex-start;
                 padding-top: 50px;
                 transition: left 0.3s;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             }
             
             .nav-links.active {
@@ -522,15 +457,11 @@
             }
             
             .nav-links li {
-                margin: 20px 0;
-            }
-            
-            .nav-links a {
-                font-size: 1.2rem;
+                margin: 15px 0;
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
             
             .section-title h2 {
@@ -542,12 +473,6 @@
                 gap: 30px;
                 text-align: center;
             }
-            .social-links {
-                display: flex;
-            }
-            .social-links a {
-                margin: 0 10px;
-            }
         }
     </style>
 </head>
@@ -556,8 +481,7 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">COLLINS MOGOI</div>
-                <ul class="nav-links">
+                <div class="logo">PORTFOLIO
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -576,15 +500,14 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span>Collins Mogoi</span></h1>
-                <p>A passionate **Cyber Security Expert** and **Web Developer** with expertise in creating modern, responsive websites and web applications. I love turning ideas into reality through code and securing digital assets.Building the future ,one line of code at a time.</p>
+                <p>A passionate cyber security expert and web developer with expertise in creating modern, responsive websites and web applications. I love turning ideas into reality through code.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Using a placeholder image for a professional look -->
-            <img src="./Image/Gemini_Generated_Image_o3tt0no3tt0no3tt.png"Profile Image">
+                <img src="./Image/Gemini_Generated_Image_o3tt0no3tt0no3tt.png"Profile Image">
             </div>
         </div>
     </section>
@@ -594,19 +517,18 @@
         <div class="container">
             <div class="section-title">
                 <h2>About Me</h2>
-                <p>Get to know more about my background, experience, and passion for web development and cybersecurity.</p>
+                <p>Get to know more about my background, experience, and passion for web development.</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>I'm a Creative Web Developer and Security Analyst</h3>
-                    <p>Hello! I'm a full-stack developer with 3+ years of experience building responsive websites and web applications. I specialize in front-end frameworks (React, Vue) but also have strong experience with back-end systems (Node.js/Express).</p>
-                    <p>My journey is deeply rooted in Computer Science, blending the art of creation with the science of protection. I am driven by the challenge of solving complex problems while maintaining a high standard of security and performance in all my projects.</p>
-                    <p>When I'm not coding, you can find me exploring new tech trends, reading cybersecurity journals, or hiking in nature.</p>
+                    <h3>I'm a Creative Web Developer</h3>
+                    <p>Hello! I'm a web developer with 3+ years of experience building responsive websites and web applications. I specialize in front-end development but also have experience with back-end technologies.</p>
+                    <p>My journey in web development started during my computer science studies, and I've been passionate about creating digital experiences ever since. I enjoy solving complex problems and continuously learning new technologies.</p>
+                    <p>When I'm not coding, you can find me exploring new tech trends, reading books, or hiking in nature.</p>
                     <a href="#" class="btn">Download CV</a>
                 </div>
                 <div class="about-image">
-                    <!-- Using a better placeholder image for the about section -->
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Workplace environment" onerror="this.onerror=null;this.src='https://placehold.co/450x300/e9ecef/6a7c92?text=Professional+Setup';">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="About Image">
                 </div>
             </div>
         </div>
@@ -616,29 +538,30 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-title">
-                <h2>My Expertise</h2>
-                <p>Here are the technologies and tools I work with to bring ideas to life and keep them secure.</p>
+                <h2>My Skills</h2>
+                <p>Here are the technologies and tools I work with to bring ideas to life.</p>
             </div>
             <div class="skills-container">
                 <div class="skill-card">
-                    <i class="fab fa-react"></i> <!-- Changed to a more specific React icon -->
+                    <i class="fab fa-html5"></i>
                     <h3>Frontend Development</h3>
-                    <p>HTML, CSS, JavaScript, **React**, Vue.js, Bootstrap, **Tailwind CSS**</p>
+                    <p>HTML, CSS, JavaScript, React, Vue.js, Bootstrap, Tailwind CSS</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-server"></i>
-                    <h3>Backend & Database</h3>
-                    <p>**Node.js**, Express, **MongoDB**, MySQL, REST APIs, Authentication.</p>
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express, MongoDB, MySQL, REST APIs, Authentication</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fas fa-shield-alt"></i> <!-- Specific icon for Security -->
-                    <h3>Cyber Security Expert</h3>
-                    <p>**Security Analysis**, Penetration Testing, Network Security, Risk Assessment, Secure Coding Practices.</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Creating websites that work perfectly on all devices and screen sizes</p>
+                    <p>Cyber Security expert</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-tools"></i>
-                    <h3>Tools & DevOps</h3>
-                    <p>Git, GitHub, VS Code, Vb.Net, Figma, Webpack, npm, Command Line, CI/CD.</p>
+                    <h3>Tools & Technologies</h3>
+                    <p>Git, GitHub, VS Code,My Sql, Vb.Net Figma, Webpack, npm, Command Line</p>
                 </div>
             </div>
         </div>
@@ -649,7 +572,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>My Projects</h2>
-                <p>Showcasing responsive and secure web solutions I've delivered.</p>
+                <p>Here are some of the projects I've worked on recently.</p>
             </div>
             <div class="projects-container">
                 <!-- Project 1 -->
@@ -658,15 +581,15 @@
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="E-commerce Website">
                     </div>
                     <div class="project-info">
-                        <h3>Secure E-commerce Platform</h3>
-                        <p>A fully responsive e-commerce platform with encrypted data handling, secure payments via Stripe, and user authentication.</p>
+                        <h3>E-commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with product listings, shopping cart, and user authentication.</p>
                         <div class="project-tags">
                             <span>React</span>
                             <span>Node.js</span>
                             <span>MongoDB</span>
                             <span>Stripe API</span>
                         </div>
-                        <a href="#" class="btn btn-outline">View Project</a>
+                        <a href="#" class="btn">View Project</a>
                     </div>
                 </div>
                 
@@ -676,33 +599,33 @@
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Task Management App">
                     </div>
                     <div class="project-info">
-                        <h3>Secure Task Management App</h3>
-                        <p>A productivity application focused on data integrity and access control for collaborative task and project management.</p>
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing tasks, projects, and deadlines with team collaboration features.</p>
                         <div class="project-tags">
                             <span>Vue.js</span>
                             <span>Firebase</span>
-                            <span>Secure APIs</span>
+                            <span>CSS3</span>
                             <span>PWA</span>
                         </div>
-                        <a href="#" class="btn btn-outline">View Project</a>
+                        <a href="#" class="btn">View Project</a>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="project-card">
+                <div class="project-card">s
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" alt="Weather Dashboard">
                     </div>
                     <div class="project-info">
-                        <h3>API-Driven Weather Dashboard</h3>
-                        <p>A responsive weather application utilizing secure API endpoints to display real-time conditions and forecasts with chart visualization.</p>
+                        <h3>Weather Dashboard</h3>
+                        <p>A responsive weather application that displays current conditions and forecasts for multiple cities.</p>
                         <div class="project-tags">
                             <span>JavaScript</span>
                             <span>API Integration</span>
                             <span>Bootstrap</span>
                             <span>Chart.js</span>
                         </div>
-                        <a href="#" class="btn btn-outline">View Project</a>
+                        <a href="#" class="btn">View Project</a>
                     </div>
                 </div>
             </div>
@@ -714,11 +637,9 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact Me</h2>
-                <p>Feel free to reach out if you have any questions or exciting opportunities for collaboration.</p>
+                <p>Feel free to reach out if you have any questions or opportunities.</p>
             </div>
-            <!-- The main presentation update is here in the layout and styling -->
             <div class="contact-container">
-                <!-- Contact Info Column -->
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -742,14 +663,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Contact Form Column -->
                 <div class="contact-form">
-                    <!-- Success Message Box - UPDATED CONTENT HERE -->
-                    <div id="success-message">
-                        <p>&#x2713; ✔✔Message sent Thank you, Collins will get back to you soon.</p>
-                    </div>
-
-                    <form id="contactForm">
+                    <form>
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" required>
@@ -777,16 +692,16 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">Collins Mogoi</div>
+                <div class="logo">Portfolio</div>
                 <div class="social-links">
-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 COLLINS MOGOI. All Rights Reserved.</p>
+                <p>&copy; 2025 collins mogoi @cory. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -798,42 +713,21 @@
         
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            // Toggle the icon between bars and times (close)
-            const icon = menuToggle.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
         });
         
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
-                // Reset icon to bars
-                const icon = menuToggle.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
             });
         });
         
-        // Form submission logic (Replaced alert() with a custom message box)
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('success-message');
-
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // 1. Display the success message
-            successMessage.classList.add('visible');
-
-            // 2. Hide the form temporarily (optional, but cleaner UX)
-            contactForm.style.opacity = 0;
-
-            // 3. Wait for 4 seconds, then reset
-            setTimeout(() => {
-                successMessage.classList.remove('visible');
-                contactForm.style.opacity = 1;
-                contactForm.reset();
-            }, 4000); 
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
         });
     </script>
 </body>
